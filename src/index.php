@@ -51,6 +51,11 @@ include './includes/autoloader.php';
     <hr>
     <h2>4.Tokens</h2>
     <a href="./View/Login.php">Login Page</a>
+    <hr>
+    <h2>5.Cookies</h2>
+    <a href="./View/Signin.php">Signin Page</a>
+    <hr>
+    <h2>6.
 </body>
 <script src="./js/script.js"></script>
 </html>

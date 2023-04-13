@@ -58,13 +58,14 @@
             <form method="GET" action="../Controller/logindata.php">
               <!-- Email input -->
               <div class="form-outline mb-4">
-                <input type="email" id="email" class="form-control" />
+                <input type="email" id="email" class="form-control" value="<?php  echo $_COOKIE["email"]; ?>" />
                 <label class="form-label" for="form2Example1">Email address</label>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="password" class="form-control" />
+                <input type="password" id="password" class="form-control" value="<?php 
+          echo $_COOKIE["password"];  ?>" />
                 <label class="form-label" for="form2Example2">Password</label>
               </div>
 
@@ -73,8 +74,8 @@
                 <div class="col d-flex justify-content-center">
                   <!-- Checkbox -->
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                    <label class="form-check-label" for="form2Example31"> Remember me </label>
+                  <p><input type="checkbox" name="remember" /> Remember me
+	</p>
                   </div>
                 </div>
                 <p id="error"></p>
