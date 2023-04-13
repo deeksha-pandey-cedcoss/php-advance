@@ -47,7 +47,10 @@ include './includes/autoloader.php';
     ?>
     <a href="./log/db.log">Log Files</a>
     <hr>
-    <h2>3.
+    <h2>3.Active Records</h2>
+    <hr>
+    <h2>4.Tokens</h2>
+    <a href="./View/Login.php">Login Page</a>
 </body>
-
+<script src="./js/script.js"></script>
 </html>
