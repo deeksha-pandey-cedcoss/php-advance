@@ -59,3 +59,72 @@ function check_data($name, $email, $pass, $repass) {
     }
     return flag;
 }
+function uppercase()
+{
+    let text=$("#text").val();
+    $.ajax({
+        url:"../Controller/change.php",
+        data:{"text":text,"action":"uppercase"},
+        type:"POST",
+        success:function(result){
+            $("#changed").val(result);
+        }
+    })
+}
+function lowercase()
+{
+    let text=$("#text").val();
+    $.ajax({
+        url:"../Controller/change.php",
+        data:{"text":text,"action":"lowercase"},
+        type:"POST",
+        success:function(result){
+            $("#changed").val(result);
+        }
+    })
+}
+function filtertext()
+{
+    let text=$("#textchange").val();
+    $.ajax({
+        url:"../Controller/change.php",
+        data:{"text":text,"action":"filter"},
+        type:"POST",
+        success:function(result){
+            $("#changedval").val(result);
+        }
+    })
+}
+function updatevalue(){
+    
+    let firstValue=$("#first").val();
+    
+    let SecondValue=$("#second").val();
+    
+    let amt=$("#amount").val();
+    console.log(amt);
+    if(amt>0){
+        if(firstValue==SecondValue){
+            $(".finalValue").html(amt);
+            console.log(firstValue);
+        }else{
+            $.ajax({
+                url:'../Controller/convert.php',
+                type:'post',
+                data:{'first':firstValue,'second':SecondValue,'amt':amt},
+                datatype:JSON,
+                success:function(value){
+                    console.log(value);
+                     $(".finalValue").html(value);
+                }
+            })
+        }
+    }
+}
+function interChangeValue(){
+    let first=$("#first").val();
+    $("#first").val($("#second").val());
+    $("#second").val(first);
+    updatevalue();
+
+}
