@@ -1,6 +1,5 @@
 <?php
 include "../config.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +10,7 @@ include "../config.php";
     <title>Document</title>
 </head>
 <body>
+    <!-- login details show -->
     <table>
         <tr>
             <th>ID</th>

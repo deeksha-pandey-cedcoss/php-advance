@@ -1,7 +1,6 @@
 <?php
-
+// autoloader
 spl_autoload_register('myAutoloader');
-
 function myAutoloader($classname){
     $path="classes/";
     $extension=".php";

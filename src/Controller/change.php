@@ -1,8 +1,7 @@
 <?php
-
+// change of case
 $text=$_POST['text'];
 $action=$_POST['action'];
-
 switch($action){
     case 'uppercase':{
         $text=strtoupper($text);
@@ -19,11 +18,6 @@ switch($action){
         echo $text;
         break;
     }
-
 }
-
-
-
-
 
 ?>

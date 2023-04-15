@@ -1,7 +1,7 @@
 <?php
+// currency converter
 session_start();
 $_SESSION['currency'] = array("RUPPEE" => "1", "USD" => "0.012", "EURO" => "0.011", "SOL" => "0.046");
-
 $first=$_POST['first'];
 $second=$_POST['second'];
 $amt=$_POST['amt'];

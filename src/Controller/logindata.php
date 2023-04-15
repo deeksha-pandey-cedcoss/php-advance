@@ -1,4 +1,5 @@
 <?php
+// login details 
 include "../config.php";
 $_SESSION['details']=[];
 $email=$_GET['email'];
@@ -16,7 +17,5 @@ $sql= "SELECT * FROM `users`";
      $str.= "" ."<tr><td>".$r["id"]. "</td>".""."<td>".$r["name"]."</td>". ""."<td>".$r["email"]."</td>"."<td>".$r["password"]."</tr>";
         }} 
         $_SESSION['details']=base64_encode($str);   
-    //     setcookie ("email",$_POST["email"],time()+ 86400*30);
-	// setcookie ("password",$_POST["password"],time()+ 86400*30);
-	// echo "Cookies Set Successfuly";
+
 ?>
